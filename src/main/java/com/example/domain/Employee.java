@@ -23,7 +23,7 @@ public class Employee {
     // 住所フィールド
     private String address;
     // 電話番号フィールド
-    private Integer telephone;
+    private String telephone;
     // 給料フィールド
     private Integer salary;
     // 特性フィールド
@@ -78,10 +78,10 @@ public class Employee {
     public void setAddress(String address) {
         this.address = address;
     }
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
     public Integer getSalary() {
