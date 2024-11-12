@@ -30,4 +30,12 @@ public class AdministratorService {
     public Administrator findByMailAddressAndPassword(String mailAddress, String password){
         return repository.findByMailAddressAndPassword(mailAddress, password);
     }
+    /**
+     * ログイン機能の作成。
+     * @param メールアドレスとパスワードを受け取る。
+     * @return 管理者情報を返す。
+     */
+    public Administrator login(String mailAddress, String password){
+        return repository.findByMailAddressAndPassword(mailAddress, password);
+    }
 }
