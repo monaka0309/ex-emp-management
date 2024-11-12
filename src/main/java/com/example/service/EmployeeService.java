@@ -17,6 +17,14 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository repository;
 
+    /**
+     * 従業員一覧の作成。
+     * @return Employeeリストを返す。
+     */
+    public List<Employee> showList(){
+        return repository.findAll();
+    }
+
     // /**
     //  * 従業員情報を全件取り出し、入社日順で並べる。
     //  * @return 全ての従業員情報を返す。
