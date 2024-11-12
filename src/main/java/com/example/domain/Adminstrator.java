@@ -1,9 +1,14 @@
 package com.example.domain;
 
+// Adminstratorドメインクラス。
 public class Adminstrator {
+    // idフィールド
     private Integer id;
+    // 名前フィールド
     private String name;
+    // メールアドレスフィールド
     private String mailAddress;
+    // パスワードフィールド
     private String password;
     public Integer getId() {
         return id;

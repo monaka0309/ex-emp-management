@@ -4,18 +4,31 @@ import java.util.Date;
 
 // import java.sql.Date;
 
+// Employeeドメインクラスの作成。
 public class Employee {
+    // idフィールド
     private Integer id;
+    // 名前フィールド
     private String name;
+    // 画像フィールド
     private String image;
+    // 性別フィールド
     private String gender;
+    // 入社日フィールド
     private Date hireDate;
+    // メールアドレスフィールド
     private String mailAddress;
+    // 郵便番号フィールド
     private String zopCode;
+    // 住所フィールド
     private String address;
+    // 電話番号フィールド
     private Integer telephone;
+    // 給料フィールド
     private Integer salary;
+    // 特性フィールド
     private String characteristics;
+    // 扶養人数フィールド
     private Integer dependentsCount;
     public Integer getId() {
         return id;
