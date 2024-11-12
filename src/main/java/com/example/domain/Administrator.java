@@ -1,9 +1,9 @@
 package com.example.domain;
 
-// Adminstratorドメインクラス。
+// Administratorドメインクラス。
 // @auther nakaryunosuke
 
-public class Adminstrator {
+public class Administrator {
     // idフィールド
     private Integer id;
     // 名前フィールド
@@ -38,8 +38,9 @@ public class Adminstrator {
     }
     @Override
     public String toString() {
-        return "Adminstrator [id=" + id + ", name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
+        return "Administrator [id=" + id + ", name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
                 + "]";
     }
+    
 
 }
