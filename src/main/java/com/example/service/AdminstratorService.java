@@ -15,19 +15,19 @@ public class AdminstratorService {
     @Autowired
     private AdminstratorRepository repository;
 
-    /**
-     * AdminstratorRepositoryクラスのinsertメソッドを実行する。
-     * @param adminstrator
-     */
-    public void insert(Adminstrator adminstrator){
-        repository.insert(adminstrator);
-    }
-    /**
-     * AdminstratorRepositoryクラスのfindByMailAddressAndPasswordメソッドを実行する。
-     * @param メールアドレスとパスワードを受け取る。
-     * @return 結果を返す。
-     */
-    public Adminstrator findByMailAddressAndPassword(String mailAddress, String password){
-        return repository.findByMailAddressAndPassword(mailAddress, password);
-    }
+    // /**
+    //  * AdminstratorRepositoryクラスのinsertメソッドを実行する。
+    //  * @param adminstrator
+    //  */
+    // public void insert(Adminstrator adminstrator){
+    //     repository.insert(adminstrator);
+    // }
+    // /**
+    //  * AdminstratorRepositoryクラスのfindByMailAddressAndPasswordメソッドを実行する。
+    //  * @param メールアドレスとパスワードを受け取る。
+    //  * @return 結果を返す。
+    //  */
+    // public Adminstrator findByMailAddressAndPassword(String mailAddress, String password){
+    //     return repository.findByMailAddressAndPassword(mailAddress, password);
+    // }
 }
