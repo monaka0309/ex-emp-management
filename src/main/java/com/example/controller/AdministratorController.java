@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.Administrator;
 // import com.example.domain.Administrator;
 import com.example.form.InsertAdministratorForm;
+import com.example.form.LoginForm;
 import com.example.service.AdministratorService;
-/**
- * AdministratorControllerクラスの作成。
- * @author nakaryunosuke
- */
+
 @Controller
 @RequestMapping("/")
 public class AdministratorController {
@@ -31,6 +29,11 @@ public class AdministratorController {
         return "administrator/insert";
     }
 
+    /**
+     * ユーザー情報を登録する。
+     * @param InsertAdministratorForm情報を取得する。
+     * @return viewファイルを返す。
+     */
     @PostMapping("/insert")
     public String insert(InsertAdministratorForm form) {
         Administrator administrator = new Administrator();
@@ -38,4 +41,15 @@ public class AdministratorController {
         service.insert(administrator);
         return "redirect:/";
     }
+    /**
+     * ログインページへフォワードする。
+     * @param フォームで従業員登録をするリクエストパラメータを受け取る・
+     * @return ログイン画面に遷移する。
+     */
+    @GetMapping("/")
+    public String toLogin(LoginForm form) {
+        return "administrator/login";
+    }
 }
+
+
