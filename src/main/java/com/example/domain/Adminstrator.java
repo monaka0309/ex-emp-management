@@ -1,6 +1,8 @@
 package com.example.domain;
 
 // Adminstratorドメインクラス。
+// @auther nakaryunosuke
+
 public class Adminstrator {
     // idフィールド
     private Integer id;
