@@ -32,28 +32,11 @@ public class EmployeeService {
     public Employee showDetail(Integer id){
         return repository.load(id);
     }
-
-
-    // /**
-    //  * 従業員情報を全件取り出し、入社日順で並べる。
-    //  * @return 全ての従業員情報を返す。
-    //  */
-    // public List<Employee> findAll(){
-    //     return repository.findAll();
-    // }
-    // /**
-    //  * 主キーに当てはまる従業員情報を検索する。
-    //  * @param idを受け取る。
-    //  */
-    // public Employee load(Integer id){
-    //     return repository.load(id);
-    // }
-    // /**
-    //  * 従業員情報を更新する。
-    //  * @param 従業員情報を受け取る。
-    //  */
-    // public void update(Employee employee){
-    //     repository.update(employee);
-    // }
-
+    /**
+     * 従業員の人数を更新する。
+     * @param 
+     */
+    public void update(Employee employee){
+        repository.update(employee);
+    }
 }
