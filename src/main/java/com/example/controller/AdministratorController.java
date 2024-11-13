@@ -70,6 +70,16 @@ public class AdministratorController {
         }
         return "redirect:/employee/showList";
     }
+    /**
+     * ログアウト機能の追加。
+     * @param ログインフォームの情報を受け取る。
+     * @return viewファイルを返す。
+     */
+    @GetMapping("/logout")
+    public String logout(LoginForm form){
+        session.invalidate();
+        return "redirect:/";
+    }
 }
 
 
