@@ -24,6 +24,15 @@ public class EmployeeService {
     public List<Employee> showList(){
         return repository.findAll();
     }
+    /**
+     * 従業員詳細ページを作る。
+     * @param idを取得する。
+     * @return 従業員情報を返す。
+     */
+    public Employee showDetail(Integer id){
+        return repository.load(id);
+    }
+
 
     // /**
     //  * 従業員情報を全件取り出し、入社日順で並べる。
