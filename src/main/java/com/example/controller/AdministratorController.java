@@ -4,12 +4,15 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.domain.Administrator;
-// import com.example.domain.Administrator;
 import com.example.form.InsertAdministratorForm;
 import com.example.form.LoginForm;
 import com.example.service.AdministratorService;
@@ -40,7 +43,10 @@ public class AdministratorController {
      * @return viewファイルを返す。
      */
     @PostMapping("/insert")
-    public String insert(InsertAdministratorForm form) {
+    public String insert(@Validated @ModelAttribute InsertAdministratorForm form, BindingResult result, RedirectAttributes redirectAttributes, Model model) {
+		if(result.hasErrors()) {
+			return toInsert(form);
+		}
         Administrator administrator = new Administrator();
         BeanUtils.copyProperties(form, administrator);
         service.insert(administrator);
@@ -61,7 +67,10 @@ public class AdministratorController {
      * @return 従業員情報⼀覧ページにリダイレクトする。戻り値が null だったらログイン画面にフォワードする。
      */
     @PostMapping("/login")
-    public String login(LoginForm form, Model model){
+    public String login(@Validated @ModelAttribute LoginForm form, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+        if(result.hasErrors()){
+            return toLogin(form);
+        }
         Administrator administrator = service.login(form.getMailAddress(), form.getPassword());
         session.setAttribute("administratorName", administrator);
         if(administrator == null){

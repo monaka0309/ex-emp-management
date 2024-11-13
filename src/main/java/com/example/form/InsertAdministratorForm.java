@@ -1,14 +1,23 @@
 package com.example.form;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 /*
  * @auther nakaryunosuke
  * InsertAdministratorFormクラスの作成。
  */
 public class InsertAdministratorForm {
     // 名前フィールド
+    @NotBlank(message = "名前を入力してください。")
     private String name;
     // メールアドレスフィールド
+    @NotBlank(message = "メールアドレスを入力してください。")
+    @Email(message = "メールアドレスを正しい形式で入力してください。")
     private String mailAddress;
     // パスワードフィールド
+    @NotBlank(message = "パスワードを入力してください。")
     private String password;
 
     public String getName() {
