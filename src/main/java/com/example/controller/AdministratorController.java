@@ -66,13 +66,14 @@ public class AdministratorController {
      * @param LoginFormにあるメールアドレスとパスワードを引数にする。
      * @return 従業員情報⼀覧ページにリダイレクトする。戻り値が null だったらログイン画面にフォワードする。
      */
+    @SuppressWarnings("unused")
     @PostMapping("/login")
     public String login(@Validated @ModelAttribute LoginForm form, BindingResult result, RedirectAttributes redirectAttributes, Model model){
         if(result.hasErrors()){
             return toLogin(form);
         }
         Administrator administrator = service.login(form.getMailAddress(), form.getPassword());
-        session.setAttribute("administratorName", administrator);
+        session.setAttribute("administratorName", administrator.getName());
         if(administrator == null){
             model.addAttribute("errorMessage", "メールアドレスまたはパスワードが不正です。");
             return toLogin(form);
