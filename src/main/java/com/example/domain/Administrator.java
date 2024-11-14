@@ -1,7 +1,9 @@
 package com.example.domain;
 
-// Administratorドメインクラス。
-// @auther nakaryunosuke
+/**
+ * Administratorドメインクラス。
+ * @auther nakaryunosuke
+ */
 
 public class Administrator {
     // idフィールド

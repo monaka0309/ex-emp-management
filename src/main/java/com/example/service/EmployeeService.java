@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.domain.Employee;
 import com.example.repository.EmployeeRepository;
 /**
+ * 従業員サービスクラスの作成。
  * @author nakaryunosuke
  */
 @Service

@@ -5,8 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 /*
- * @auther nakaryunosuke
  * InsertAdministratorFormクラスの作成。
+ * @auther nakaryunosuke
  */
 public class InsertAdministratorForm {
     // 名前フィールド

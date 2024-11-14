@@ -2,9 +2,10 @@ package com.example.domain;
 
 import java.util.Date;
 
-// import java.sql.Date;
-
-// Employeeドメインクラスの作成。
+/**
+ * Employeeドメインクラスの作成。
+ * @author nakaryunosuke
+ */
 public class Employee {
     // idフィールド
     private Integer id;

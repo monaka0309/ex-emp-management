@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 /**
+ * ログインフォームの作成。
  * @author nakaryunosuke
  */
 public class LoginForm {

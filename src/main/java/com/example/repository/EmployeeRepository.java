@@ -9,11 +9,13 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
+import com.example.domain.Employee;
+
 /**
+ * 従業員リポジトリクラス。
  * @author nakaryunosuke
  */
 
-import com.example.domain.Employee;
 @Repository
 public class EmployeeRepository {
     @Autowired
@@ -57,7 +59,6 @@ public class EmployeeRepository {
             SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
             return template.queryForObject(sql, param, EMPLOYEE_ROW_MAPPER);
         } catch (Exception e) {
-            // TODO: handle exception
             return null;
         }
     }
